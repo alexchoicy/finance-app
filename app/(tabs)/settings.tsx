@@ -1,11 +1,10 @@
-import { Center } from '@/components/ui/center';
-import { Text } from '@/components/ui/text';
+import { View, Text} from "react-native";
 
 export default function Settings() {
-  return (
-    <Center className='h-full w-full'>
-      <Text>Tab [Home|Settings]</Text>
-    </Center>
-  );
+    return (
+        <View className='h-full w-full'>
+        <Text>Tab [Home|Settings]</Text>
+      </View>
+    );
 }
 
