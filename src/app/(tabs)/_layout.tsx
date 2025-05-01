@@ -1,18 +1,18 @@
-import { AntDesign } from '@expo/vector-icons';
-import FontAwesome from '@expo/vector-icons/FontAwesome';
-import FontAwesome6 from '@expo/vector-icons/FontAwesome6';
-import FontAwesome5 from '@expo/vector-icons/FontAwesome5';
-import MaterialIcons from '@expo/vector-icons/MaterialIcons';
+import { AntDesign } from "@expo/vector-icons";
+import FontAwesome from "@expo/vector-icons/FontAwesome";
+import FontAwesome6 from "@expo/vector-icons/FontAwesome6";
+import FontAwesome5 from "@expo/vector-icons/FontAwesome5";
+import MaterialIcons from "@expo/vector-icons/MaterialIcons";
 
-import { Tabs } from 'expo-router';
+import { Tabs } from "expo-router";
 
 export default function TabLayout() {
   return (
-    <Tabs screenOptions={{ tabBarActiveTintColor: 'blue', headerShown: false }}>
+    <Tabs screenOptions={{ tabBarActiveTintColor: "blue", headerShown: false }}>
       <Tabs.Screen
         name="accounts/index"
         options={{
-          title: 'Accounts',
+          title: "Accounts",
           headerShown: false,
           tabBarIcon: ({ color }) => <MaterialIcons size={28} name="account-balance-wallet" color={color} />,
         }}
@@ -20,31 +20,31 @@ export default function TabLayout() {
       <Tabs.Screen
         name="transactions"
         options={{
-          title: 'Transactions',
+          title: "Transactions",
           headerShown: false,
           tabBarIcon: ({ color }) => <FontAwesome6 size={28} name="money-bill-transfer" color={color} />,
         }}
       />
       <Tabs.Screen
-        name='actions'
+        name="actions"
         options={{
-          title: 'Actions',
+          title: "Actions",
           headerShown: false,
           tabBarIcon: ({ color }) => <AntDesign size={28} name="upcircle" color={color} />,
         }}
       />
       <Tabs.Screen
-        name='recurring'
+        name="recurring"
         options={{
-          title: 'Recurring',
+          title: "Recurring",
           headerShown: false,
           tabBarIcon: ({ color }) => <FontAwesome5 size={28} name="recycle" color={color} />,
         }}
       />
       <Tabs.Screen
-        name='settings'
+        name="settings"
         options={{
-          title: 'Settings',
+          title: "Settings",
           headerShown: false,
           tabBarIcon: ({ color }) => <FontAwesome size={28} name="cog" color={color} />,
         }}
