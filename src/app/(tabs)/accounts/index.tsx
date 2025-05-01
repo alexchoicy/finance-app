@@ -4,7 +4,7 @@ import { View, Text, Button, SafeAreaView, StatusBar, ScrollView } from "react-n
 
 export default function AccountsPage() {
     return (
-        <SafeAreaView style={{ flex: 1, paddingTop: StatusBar.currentHeight }} className="px-4 py-4">
+        <View className="px-4 pt-4">
             <StatusBar barStyle="dark-content" />
 
             <View className="flex-row mb-4 justify-between items-center">
@@ -12,9 +12,6 @@ export default function AccountsPage() {
 
                 <Button title="Add Account" onPress={() => { }} color="black" />
             </View>
-
-
-
             <ScrollView>
                 <AccountCard
                     name="HSBC Savings"
@@ -107,6 +104,6 @@ export default function AccountsPage() {
 
 
             </ScrollView>
-        </SafeAreaView>
+        </View>
     )
 }
