@@ -1,6 +1,7 @@
+import { themes } from "@/lib/utils/styleColor";
 import AsyncStorage from "@react-native-async-storage/async-storage";
 import React, { createContext, useEffect, useState, useCallback, useContext } from "react";
-import { useColorScheme } from "react-native";
+import { useColorScheme, View } from "react-native";
 
 type Theme = "light" | "dark";
 
@@ -56,7 +57,13 @@ export const ThemeProvider = ({ children }: { children: React.ReactNode }) => {
     loadTheme();
   }, [systemColorScheme]);
   console.log("ThemeProvider", theme);
-  return <ThemeContext.Provider value={{ theme, setTheme }}>{children}</ThemeContext.Provider>;
+  return (
+    <ThemeContext.Provider value={{ theme, setTheme }}>
+      <View style={themes[theme]} className="flex-1">
+        {children}
+      </View>
+    </ThemeContext.Provider>
+  );
 };
 
 export const useTheme = () => useContext(ThemeContext);

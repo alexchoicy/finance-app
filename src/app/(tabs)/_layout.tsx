@@ -5,18 +5,16 @@ import { View } from "@/components/View";
 
 const tabBarStyles = {
   light: {
-    backgroundColor: "#fff",
-    borderTopStartRadius: 5,
-    borderTopWidth: 0,
-    elevation: 0,
-    shadowOpacity: 0,
+    backgroundColor: "#ffffff",
+    // borderTopWidth: 0,
+    // elevation: 0,
+    // shadowOpacity: 0,
   },
   dark: {
-    backgroundColor: "#222",
-    borderTopStartRadius: 5,
-    borderTopWidth: 0,
-    elevation: 0,
-    shadowOpacity: 0,
+    backgroundColor: "#030711",
+    // borderTopWidth: 0,
+    // elevation: 0,
+    // shadowOpacity: 0,
   },
 };
 
@@ -34,7 +32,7 @@ export default function TabLayout() {
         }}
       >
         <Tabs.Screen
-          name="accounts/index"
+          name="(accounts)"
           options={{
             title: "Accounts",
             headerShown: false,
